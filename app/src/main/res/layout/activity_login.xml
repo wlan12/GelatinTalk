@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/loginID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="이메일 또는 전화번호"
+        android:background="@drawable/under"
+        android:paddingBottom="10dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginRight="101dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.386" />
+
+    <ImageButton
+        android:id="@+id/imageIdX"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="#00ff0000"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/loginID"
+        app:layout_constraintEnd_toEndOf="@+id/loginID"
+        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintStart_toStartOf="@+id/loginID"
+        app:layout_constraintTop_toTopOf="@+id/loginID"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/x"
+        tools:ignore="MissingConstraints,OnClick"
+        android:onClick="removeID"/>
+
+    <EditText
+        android:id="@+id/loginPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:background="@drawable/under"
+        android:paddingBottom="10dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/loginID"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/loginID"
+        app:layout_constraintTop_toBottomOf="@+id/loginID" />
+
+    <ImageButton
+        android:id="@+id/imagePassX"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="#00ff0000"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/loginPassword"
+        app:layout_constraintEnd_toEndOf="@+id/loginPassword"
+        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintStart_toStartOf="@+id/loginPassword"
+        app:layout_constraintTop_toTopOf="@+id/loginPassword"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/x"
+        tools:ignore="MissingConstraints,OnClick"
+        android:onClick="removePass"/>
+
+    <TextView
+        android:id="@+id/textError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        app:layout_constraintStart_toStartOf="@+id/loginPassword"
+        app:layout_constraintTop_toBottomOf="@+id/loginPassword"
+        android:textColor="#FF0000"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:enabled="false"
+        android:text="로그인"
+        app:layout_constraintEnd_toEndOf="@+id/loginPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/loginPassword"
+        app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/loginJoin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.043">
+
+        <TextView
+            android:id="@+id/findID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="계정 찾기"
+            app:layout_constraintHorizontal_bias="0.167" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" | "
+            app:layout_constraintEnd_toStartOf="@+id/findPassword"
+            app:layout_constraintHorizontal_bias="0.228"
+            app:layout_constraintStart_toEndOf="@+id/findID" />
+
+        <TextView
+            android:id="@+id/findPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 찾기"
+            app:layout_constraintHorizontal_bias="0.837" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loginJoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="회원가입하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
